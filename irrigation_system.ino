@@ -13,12 +13,13 @@
 // DS3231 SCL --> A5    Don't forget to pullup (4.7k to VCC)
 
 //
-#define NUM_STATES 4
+#define NUM_STATES				5
 //#define STATE_OFF 0
-#define STATE_ON 0
-#define STATE_SET_TIME 1
-#define STATE_SET_START_TIME 2
-#define STATE_SET_DURATION 3
+#define STATE_ON				0
+#define STATE_SET_TIME			1
+#define STATE_SET_START_TIME	2
+#define STATE_SET_DURATION		3
+#define STATE_OUT_ON			4
 
 #define STANDBY_DELAY_MS	10000
 
@@ -67,6 +68,8 @@ unsigned long standby_time;
 // if true the system is in standby
 bool standby_state = false;
 
+// used for STATE_OUT_ON state
+bool state_on_enabled = false;
 
 // function called on standby exit
 void wakeUp()
@@ -333,7 +336,58 @@ void loop(void)
 			standby_time = millis();
 			delay(50);
 		break;
+		case STATE_OUT_ON:
+		lcd.setCursor(0,0);
+		lcd.print(" Set OUT ON:");
 		
+		//turn off relay
+		digitalWrite(relayPin, HIGH);
+		state_on_enabled = false;
+		
+		//read the hour button state
+		buttonInscreaseHourState = digitalRead(buttonIncreaseHourPin);
+		
+		if(buttonInscreaseHourState == HIGH)
+		{
+			//debouncing
+			if((millis() - lastDebounceTimeIncreaseHour) > 100)
+			{
+				// disable out
+				state_on_enabled = false;
+			}
+			lastDebounceTimeIncreaseHour = millis();
+		}
+		
+		//read the minute button state
+		buttonInscreaseMinuteState = digitalRead(buttonIncreaseMinutePin);
+		
+		if(buttonInscreaseMinuteState == HIGH)
+		{
+			//debouncing
+			if((millis() - lastDebounceTimeIncreaseMin) > 100)
+			{
+				// enable out
+				state_on_enabled = true;
+			}
+			lastDebounceTimeIncreaseMin = millis();
+		}
+		
+		if(state_on_enabled)
+		{
+			digitalWrite(relayPin, LOW);
+			sprintf(lcd_string, " %02d:%02d -- ON", RTC.now().hour(), RTC.now().minute());
+		}
+		else
+		{
+			digitalWrite(relayPin, HIGH);
+			sprintf(lcd_string, " %02d:%02d -- OFF", RTC.now().hour(), RTC.now().minute());
+		}
+		// set info on the LCD
+		lcd.setCursor(0,1);
+		lcd.print(lcd_string);
+		standby_time = millis();
+		delay(50);
+		break;		
 		default:
 			lcd.setCursor(0,1);
 			lcd.print(" STATE ERROR!!!");
