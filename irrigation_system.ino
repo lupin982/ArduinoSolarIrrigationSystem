@@ -155,7 +155,6 @@ void loop(void)
 				#ifndef STANDALONE
 					LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 				#endif
-
 			}
 		
 			// check for standby
@@ -163,6 +162,7 @@ void loop(void)
 			{
 				lcd.noDisplay();
 				standby_state = true;
+		
 				// Allow wake up pin to trigger interrupt on low.
 				attachInterrupt(0, wakeUp, CHANGE );
 			}
@@ -180,13 +180,20 @@ void loop(void)
 			hours = currentDateTimeRead.hour() - start_hour;
 			mins = currentDateTimeRead.minute() - start_minute;
 			
+			unsigned int start_time_min;
+			unsigned int duration_min;
+			unsigned int current_time_min;
 			
+			start_time_min = start_hour * 60 + start_minute;
+			duration_min  = duration_hours * 60 + duration_minutes;
+			current_time_min = currentDateTimeRead.hour() * 60 + currentDateTimeRead.minute();
 			
 			// variable for the line 1 of the LCD
 			char lcd_string1[16];
 		
 			// check if enable or not the irrigation
-			if(((hours <= duration_hours) && (hours >= 0)) && ((mins < duration_minutes) && (mins >= 0)))
+			//if(((hours <= duration_hours) && (hours >= 0)) && ((mins < duration_minutes) && (mins >= 0)))
+			if((start_time_min < current_time_min) && ((start_time_min + duration_min) > current_time_min))
 			{	
 				digitalWrite(relayPin, LOW);
 				standby_time = millis();

@@ -41,93 +41,99 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>__AVR_ATmega328p__</Value>
-            <Value>__AVR_ATmega328P__</Value>
-            <Value>ARDUINO=101</Value>
-            <Value>ARDUINO_MAIN</Value>
-            <Value>F_CPU=16000000L</Value>
-            <Value>__AVR__</Value>
-            <Value>__cplusplus</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>C:\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Arduino\libraries\Wire</Value>
-            <Value>C:\Arduino\libraries\Wire\utility</Value>
-            <Value>C:\Arduino\libraries\SPI</Value>
-            <Value>C:\Arduino\libraries\SPI\utility</Value>
-            <Value>C:\Arduino\libraries\RTClib-master</Value>
-            <Value>C:\Arduino\libraries\RTClib-master\utility</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master\utility</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -include=arduino.h</avrgcc.compiler.miscellaneous.OtherFlags>
-        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>__AVR_ATmega328p__</Value>
-            <Value>__AVR_ATmega328P__</Value>
-            <Value>ARDUINO=101</Value>
-            <Value>ARDUINO_MAIN</Value>
-            <Value>F_CPU=16000000L</Value>
-            <Value>__AVR__</Value>
-            <Value>__cplusplus</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>C:\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Arduino\libraries\Wire</Value>
-            <Value>C:\Arduino\libraries\Wire\utility</Value>
-            <Value>C:\Arduino\libraries\SPI</Value>
-            <Value>C:\Arduino\libraries\SPI\utility</Value>
-            <Value>C:\Arduino\libraries\RTClib-master</Value>
-            <Value>C:\Arduino\libraries\RTClib-master\utility</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master\utility</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
-            <Value>
-            </Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
-        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
-        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-        <avrgcccpp.compiler.miscellaneous.OtherFlags>-include=arduino.h</avrgcccpp.compiler.miscellaneous.OtherFlags>
-        <avrgcccpp.linker.memorysettings.Comment>&lt;segmentname&gt;=&lt;address&gt;, for example  .boot=0xff</avrgcccpp.linker.memorysettings.Comment>
-        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-      </AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=155</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries</Value>
+      <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>../../ArduinoSolarIrrigationSystem</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=155</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries</Value>
+      <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>../../ArduinoSolarIrrigationSystem</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
     </ToolchainSettings>
     <VisualMicroSettings>
       <VisualMicroSettings>
@@ -194,97 +200,104 @@ build.arch=AVR
         <arduino.upload.port>COM5</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs;../../ArduinoSolarIrrigationSystem;C:/Program Files/Arduino/libraries/LiquidCrystal/src;C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files/Arduino/libraries/RTClib-master;C:/Program Files/Arduino/libraries/RTClib-master/utility;C:/Program Files/Arduino/libraries/Low-Power-master;C:/Program Files/Arduino/libraries/Low-Power-master/utility;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/avr/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>__AVR_ATmega328p__</Value>
-            <Value>__AVR_ATmega328P__</Value>
-            <Value>ARDUINO=101</Value>
-            <Value>ARDUINO_MAIN</Value>
-            <Value>F_CPU=16000000L</Value>
-            <Value>__AVR__</Value>
-            <Value>__cplusplus</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>C:\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Arduino\libraries\Wire</Value>
-            <Value>C:\Arduino\libraries\Wire\utility</Value>
-            <Value>C:\Arduino\libraries\SPI</Value>
-            <Value>C:\Arduino\libraries\SPI\utility</Value>
-            <Value>C:\Arduino\libraries\RTClib-master</Value>
-            <Value>C:\Arduino\libraries\RTClib-master\utility</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master\utility</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -include=arduino.h</avrgcc.compiler.miscellaneous.OtherFlags>
-        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>__AVR_ATmega328p__</Value>
-            <Value>__AVR_ATmega328P__</Value>
-            <Value>ARDUINO=101</Value>
-            <Value>ARDUINO_MAIN</Value>
-            <Value>F_CPU=16000000L</Value>
-            <Value>__AVR__</Value>
-            <Value>__cplusplus</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>C:\Arduino\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal</Value>
-            <Value>C:\Arduino\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Arduino\libraries\Wire</Value>
-            <Value>C:\Arduino\libraries\Wire\utility</Value>
-            <Value>C:\Arduino\libraries\SPI</Value>
-            <Value>C:\Arduino\libraries\SPI\utility</Value>
-            <Value>C:\Arduino\libraries\RTClib-master</Value>
-            <Value>C:\Arduino\libraries\RTClib-master\utility</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master</Value>
-            <Value>C:\Arduino\libraries\Low-Power-master\utility</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\avr\</Value>
-            <Value>c:\arduino\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
-            <Value>
-            </Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
-        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
-        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-        <avrgcccpp.compiler.miscellaneous.OtherFlags>-include=arduino.h</avrgcccpp.compiler.miscellaneous.OtherFlags>
-        <avrgcccpp.linker.memorysettings.Comment>&lt;segmentname&gt;=&lt;address&gt;, for example  .boot=0xff</avrgcccpp.linker.memorysettings.Comment>
-        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-      </AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=155</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries</Value>
+      <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>../../ArduinoSolarIrrigationSystem</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=155</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries</Value>
+      <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Low-Power-master</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/RTClib-master</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/LiquidCrystal/src</Value>
+      <Value>../../ArduinoSolarIrrigationSystem</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs</Value>
+      <Value>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
     </ToolchainSettings>
     <VisualMicroSettings>
       <VisualMicroSettings>
@@ -351,6 +364,7 @@ build.arch=AVR
         <arduino.upload.port>COM5</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files/Arduino/hardware/arduino/avr/variants/eightanaloginputs;../../ArduinoSolarIrrigationSystem;C:/Program Files/Arduino/libraries/LiquidCrystal/src;C:/Program Files/Arduino/libraries/LiquidCrystal/src/utility;C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire;C:/Program Files/Arduino/hardware/arduino/avr/libraries/Wire/utility;C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI;C:/Program Files/Arduino/hardware/arduino/avr/libraries/SPI/utility;C:/Program Files/Arduino/libraries/RTClib-master;C:/Program Files/Arduino/libraries/RTClib-master/utility;C:/Program Files/Arduino/libraries/Low-Power-master;C:/Program Files/Arduino/libraries/Low-Power-master/utility;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/avr/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Documents and Settings/Francesco/Desktop/Work projects/AeroQuad-master/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;</VMSETTING_IncludePaths>
   </PropertyGroup>
   <ItemGroup>
     <None Include="irrigation_system.ino">
@@ -361,6 +375,9 @@ build.arch=AVR
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Visual Micro\.ArduinoSolarIrrigationSystem.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Visual Micro\.irrigation_system.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>
